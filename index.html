@@ -2,89 +2,100 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Mon CV</title>
   <meta name="description" content="A propos de moi">
-  <meta name="keywords" content="web,developer,resume"/>
-  <meta name="author" content="Mon nom">
+  <meta name="keywords" content="web,developer,resume">
+  <meta name="author" content="Ranya">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Feuilles de style -->
   <link rel="stylesheet" href="css/resume.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Police Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-</head>
 <body>
-  <i class="icon-camera-retro">
   <div id="wrapper">
-  <header><h1>Ranya</h1>
-          <h2>Développeuse Web</h2>
-          <img src="./img/photo.png" alt="Photo de profil" width="150">
-          <p>Email : aaae@hotmail.fr</p>
-          <p>Age : 25 ans</p>
-          <p>Nationalité : Marocaine</p> 
-  </header>
-<main>
-   <section>
-    <h3>À propos de moi</h3>
-    <p>Étudiante en développement web passionnée par la création de sites modernes et originales.</p>
-  </section>
 
-  <article>
-    <h3>Expériences professionnelles</h3>
-    <ul>
-      <li><strong>2024 - Stage :</strong> Développeuse Front-End chez ATT</li>
-      <li><strong>2023 :</strong> Projet universitaire en HTML/CSS</li>
-    </ul>
-  </article>
+    <main itemscope itemtype="https://schema.org/Person">
+      <header>
+        <h1 itemprop="name">Ranya</h1>
+        <h2 itemprop="jobTitle">Développeuse Web</h2>
+        <img src="./img/photo.png" alt="Photo de profil" width="150" itemprop="image">
+        <p>Email : <a href="mailto:aaae@hotmail.fr" itemprop="email">aaae@hotmail.fr</a></p>
+        <p>Âge : <span itemprop="birthDate">25 ans</span></p>
+        <p>Nationalité : <span itemprop="nationality">Marocaine</span></p>
+      </header>
 
-  <section>
-    <h3>Compétences</h3>
-    <dl>
-    <dt>HTML</dt>
-    <dd>Bon niveau, création de pages structurées</dd>
+      <section>
+        <h3>À propos de moi</h3>
+        <p itemprop="description">
+          Étudiante en développement web passionnée par la création de sites modernes et originaux.
+        </p>
+      </section>
 
-    <dt>CSS</dt>
-    <dd>Maîtrise des styles</dd>
+      <article>
+        <h3>Expériences professionnelles</h3>
+        <ul>
+          <li><strong>2024 - Stage :</strong> Développeuse Front-End chez <span itemprop="worksFor">ATT</span></li>
+          <li><strong>2023 :</strong> Projet universitaire en HTML/CSS</li>
+        </ul>
+      </article>
 
-    <dt>JavaScript</dt>
-    <dd>Notions de base</dd>
+      <section>
+        <h3>Compétences</h3>
+        <dl>
+          <dt itemprop="knowsAbout">HTML</dt>
+          <dd>Bon niveau, création de pages structurées</dd>
 
-    <dt>Git / GitLab</dt>
-    <dd>Utilisation pour le travail collaboratif et le versionnage</dd>
-  </dl>
-  </section>
+          <dt itemprop="knowsAbout">CSS</dt>
+          <dd>Maîtrise des styles</dd>
 
-  <section>
-    <h3>Formation</h3>
-    <p>Master en  Informatique – Université de Bretagne Occidentale</p>
-  </section>
+          <dt itemprop="knowsAbout">JavaScript</dt>
+          <dd>Notions de base</dd>
 
-  <section>
-    <h3>Langues & Loisirs</h3>
-    <p>Anglais B2, Francais C2 – Passionnée par la Musique  et  le dessin.</p>
-  </section>
-</main>
-<footer>
-  <p>Retrouvez-moi sur :</p>
-  <ul>
-    <li>
- <a href="https://www.linkedin.com/home" class="github-link">
-      <i class="fa-brands fa-linkedin">Mon Linkedin
- </i>
-    </a></li> 
+          <dt itemprop="knowsAbout">Git / GitLab</dt>
+          <dd>Utilisation pour le travail collaboratif et le versionnage</dd>
+        </dl>
+      </section>
 
- <li>
-<a href="https://github.com/" class="github-link">
-      <i class="fa-brands fa-github">Mon github </i>
-    </a></li> </ul>
-</footer>
- </div>
-</i>
+      <section>
+        <h3>Formation</h3>
+        <p itemprop="alumniOf">Master en Informatique – Université de Bretagne Occidentale</p>
+      </section>
+
+      <section>
+        <h3>Langues & Loisirs</h3>
+        <p itemprop="knowsLanguage">Anglais B2, Français C2</p>
+        <p itemprop="hasOccupation">Passionnée par la musique et le dessin.</p>
+      </section>
+
+      <footer>
+        <p>Retrouvez-moi sur :</p>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/home" itemprop="sameAs">
+              <i class="fa-brands fa-linkedin"></i>linkedin
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/" itemprop="sameAs">
+              <i class="fa-brands fa-github"></i>github  
+            </a>
+          </li>
+        </ul>
+        <p>© 2025 – <span itemprop="name">Ranya</span> – Tous droits réservés</p>
+      </footer>
+    </main>
+    
+
+  </div>
 </body>
 </html>
+

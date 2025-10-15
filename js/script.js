@@ -58,4 +58,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 30);
   }
 });
+// TOOLTIP simple (apparition sur survol)
+const skills = document.querySelectorAll("#competences dt");
+
+// Création du tooltip (bulle d’info)
+const tooltip = document.createElement("div");
+tooltip.style.position = "absolute";
+tooltip.style.padding = "5px 10px";
+tooltip.style.backgroundColor = "#333";
+tooltip.style.color = "#fff";
+tooltip.style.borderRadius = "5px";
+tooltip.style.fontSize = "0.9em";
+tooltip.style.display = "none";
+tooltip.style.pointerEvents = "none";
+document.body.appendChild(tooltip);
+
+// Quand la souris passe sur une compétence
+skills.forEach(skill => {
+  skill.addEventListener("mouseenter", (e) => {
+    tooltip.textContent = skill.getAttribute("data-description");
+    tooltip.style.display = "block";
+  });
+
+  skill.addEventListener("mousemove", (e) => {
+    tooltip.style.left = e.pageX + 10 + "px";
+    tooltip.style.top = e.pageY + 10 + "px";
+  });
+
+  skill.addEventListener("mouseleave", () => {
+    tooltip.style.display = "none";
+  });
+});
+
 

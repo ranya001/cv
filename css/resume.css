@@ -1,15 +1,23 @@
-html, button, input, select, textarea {
-  color: #444;
-}
 
-html {
+html, body, button, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #444;
   font-size: 1em;
   line-height: 1.4;
 }
+
 body {
-  background-color: #f5f5dc ;
-  margin: 0;
-  font-family: Arial, sans-serif;
+  background-color: #f5f5dc;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 #wrapper {
@@ -18,49 +26,72 @@ body {
   margin: 0 auto;
   padding: 30px;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-header h1 {
-  font-family: 'Roboto', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2em;
-  color: #333;
-  margin: 0;
-}
+
 header {
-  background: #fff; 
-  padding: 20px;  
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
 }
-
 
 header img {
-  float: right;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
   object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
 }
-section {
-  margin-bottom: 20px;
+
+header .header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
- section h2 {
+
+header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-weight: normal;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+header p {
+  margin: 3px 0;
+  font-size: 0.95em;
+  color: #333;
+}
+
+
+section, article {
+  margin-bottom: 25px;
+}
+
+section h3, article h3 {
   font-family: 'Roboto', sans-serif;
   color: #222;
   border-bottom: 2px solid #444;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
-section p, section li {
+
+section p, section li, article li {
   color: #444;
   line-height: 1.6;
 }
@@ -69,21 +100,8 @@ ul {
   list-style-type: disc;
   margin-left: 20px;
 }
-a {
-  color: #3366cc;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.github-link i {
-  font-size: 2em;       
-  vertical-align: middle; 
-  margin-right: 5px;     
-  font-weight: normal;   
-  color: inherit;  
-  font-size: 30px;
-}
+
+
 .details {
   display: none;
   overflow: hidden;
@@ -92,11 +110,106 @@ a:hover {
   font-style: italic;
   color: #444;
   background-color: #f9f9f9;
-  transition: background-color 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, max-height 0.3s ease;
 }
+
 .details.show {
   display: block;
   max-height: 200px;
   background-color: #eef;
 }
+
+.btn-details {
+  float: right; /* bouton à droite */
+  padding: 2px 8px;
+  font-size: 0.85em;
+  cursor: pointer;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-details:hover {
+  background-color: #1558b0;
+}
+
+#competences dl {
+  margin-bottom: 15px;
+}
+
+#competences dt {
+  font-weight: bold;
+}
+
+#competences dd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.stars {
+  margin-left: 10px;
+}
+
+.bar-container {
+  margin-left: 15px;
+  height: 20px;
+  width: 150px; 
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar {
+ height: 100%;
+  width: 0; 
+  background-color: orange;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+footer i {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+/* ---------------------------------
+   Responsive
+--------------------------------- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .header-info {
+    align-items: center;
+  }
+
+  #wrapper {
+    padding: 20px;
+  }
+
+  .btn-details {
+    float: none;
+    display:
 

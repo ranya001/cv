@@ -107,7 +107,33 @@ Rendre la page compréhensible par les moteurs de recherche grâce à [schema.or
 - Des **micro-données** intégrées (schema.org/Person).  
 - Un projet complet versionné sur **GitLab** avec les bons tags.
 
+# README – TP Développement Web
+Le projet est organisé de manière simple et claire :
 
+index.html : structure principale du CV avec sections pour le profil, expériences et compétences.
 
+style.css : styles pour l’ensemble des éléments, responsive et moderne.
 
+script.js : comportements interactifs (boutons, tooltips, histogrammes).
+
+3. Fonctionnalités
+a. Expériences professionnelles
+
+Chaque expérience dispose d’un bouton + pour afficher ou cacher les détails.
+
+L’animation est fluide grâce à JS (expand() / collapse()).
+
+b. Compétences
+
+Les compétences sont affichées sous forme de liste <dl>.
+
+Chaque compétence a une barre horizontale colorée indiquant le niveau.
+
+Les tooltips apparaissent au survol pour donner des informations complémentaires.
+
+c. Histogramme des compétences
+
+Les barres sont proportionnelles au niveau de chaque compétence.
+d/Tooltips :
+Au survol d’une compétence, une bulle apparaît avec une courte description
 
